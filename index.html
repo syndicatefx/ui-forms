@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width initial-scale=1.0"/>
+    <meta name="handheldfriendly" content="true"/>
+    <meta name="mobileoptimized" content="320"/>
+    <title>ui-forms by Syndicatefx</title>
+    <meta name="description" content="Fancy HTML form elements"/>
+    <link rel="stylesheet" href="css/ui-forms.min.css">
+    <!--Demo styles only-->
+    <style>header{max-width:75rem;margin-left:auto;margin-right:auto;padding:2rem;display:flex;align-items:center;justify-content:space-between}header h1{font-size:1rem;font-weight:600;text-transform:uppercase}header nav{display:flex}header span{font-size:.875rem;font-weight:600;padding-left:.5rem;padding-right:.5rem}ul{list-style:none}.grid,article{max-width:75rem;margin-left:auto;margin-right:auto;padding-top:8vmin;padding-bottom:8vmin}.grid{--min:18rem;--gap:1rem;display:grid;grid-gap:var(--gap);grid-template-columns:repeat(auto-fit,minmax(var(--min),1fr))}.grid>*{padding:2rem}.grid>*>*{margin-bottom:2rem}</style>
+</head>
+<body>
+  <header>
+    <h1>ui-forms</h1>
+    <nav>
+      <span>Light</span><input type="checkbox" class="switch themeSwitch"><span>Dark</span>
+    </nav>
+  </header>
+  <div class="grid">
+    <!--Checkbox-->
+    <ul>
+      <li>
+        <input id="c1" type="checkbox">
+        <label for="c1">Checkbox</label>
+      </li>
+      <li>
+        <input id="c2" type="checkbox" checked>
+        <label for="c2">Checkbox</label>
+      </li>
+      <li>
+        <input id="c1d" type="checkbox" disabled>
+        <label for="c1d">Checkbox(disabled)</label>
+      </li>
+      <li>
+        <input id="c2d" type="checkbox" checked disabled>
+        <label for="c2d">Checkbox(disabled)</label>
+      </li>
+    </ul>
+
+    <!--Radio-->
+    <ul>
+      <li>
+        <input id="r1" type="radio" name="radio" value="1">
+        <label for="r1">Radio</label>
+      </li>
+      <li>
+        <input id="r2" type="radio" name="radio" value="2" checked>
+        <label for="r2">Radio</label>
+      </li>
+      <li>
+        <input id="r1d" type="radio" name="radiod" value="1" disabled>
+        <label for="r1d">Radio(disabled)</label>
+      </li>
+      <li>
+        <input id="r2d" type="radio" name="radiod" value="2" checked disabled>
+        <label for="r2d">Radio(disabled)</label>
+      </li>
+    </ul>
+
+    <!--Switch-->
+    <ul>
+      <li>
+        <input id="s1" type="checkbox" class="switch">
+        <label for="s1">Switch</label>
+      </li>
+      <li>
+        <input id="s2" type="checkbox" class="switch" checked>
+        <label for="s2">Switch</label>
+      </li>
+      <li>
+        <input id="s1d" type="checkbox" class="switch" disabled>
+        <label for="s1d">Switch(disabled)</label>
+      </li>
+      <li>
+        <input id="s2d" type="checkbox" class="switch" checked disabled>
+        <label for="s2d">Switch(disabled)</label>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="grid">
+    <!--Range-->
+    <ul>
+      <li>
+        <input type="range" value="10" max="50">
+      </li>
+    </ul>
+  </div>
+
+  <div class="grid">
+    <!--Fields-->
+    <ul>
+      <li>
+        <label for="text">Text</label>
+        <input type="text" id="text" placeholder="Placeholder text">
+      </li>
+      <li>
+        <label for="text-2">Text(disabled)</label>
+        <input type="text" id="text-2" value="value" disabled>
+      </li>
+      <li>
+        <label for="number">Number</label>
+        <input type="number" id="number">
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <label for="select">Select</label>
+        <select id="select">
+          <option value="Choice 1">Choice 1</option>
+          <option value="Choice 2">Choice 2</option>
+          <option value="Choice 3">Choice 3</option>
+        </select>
+      </li>
+      <li>
+        <label for="select-2">Select(disabled)</label>
+        <select id="select-2" disabled>
+          <option value="Choice 1">Choice 1</option>
+          <option value="Choice 2">Choice 2</option>
+          <option value="Choice 3">Choice 3</option>
+        </select>
+      </li>
+      <li>
+        <label for="date">Date</label>
+        <input type="date" id="date">
+      </li>
+    </ul>
+  </div>
+
+  <div class="grid">
+    <!--Textarea-->
+    <ul>
+      <li>
+        <label for="textarea">Textarea</label>
+        <textarea id="textarea"></textarea>
+      </li>
+    </ul>
+  </div>
+
+  <footer class="grid">
+    <p>Handcrafted by <a href="https://syndicatefx.com" style="color:var(--color-brand)">Syndicatefx</a></p>
+    <p>Fork on <a href="" style="color:var(--color-brand)">Github</a></p>
+  </footer>
+
+  <script>
+    const toggleSwitch = document.querySelector('.themeSwitch');
+    function switchTheme(e) {
+        if (e.target.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }    
+    }
+    toggleSwitch.addEventListener('change', switchTheme, false);
+  </script>
+</body>
+</html>

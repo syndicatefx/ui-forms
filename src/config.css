@@ -1,0 +1,125 @@
+:root {
+
+    /* Colors */
+    --color-brand: hsl(260deg 80% 50%);
+
+    --color-0: hsl(0deg 0% 100%);
+    --color-1: hsl(0deg 0% 75%);
+    --color-2: hsl(0deg 0% 25%);
+
+    --color-disabled-0: hsl(0deg 0% 94%);
+    --color-disabled-1: hsl(0deg 0% 88%);
+    --color-disabled-2: hsl(0deg 0% 84%);
+
+    /* -------------------------------------
+        Toggles -- checkbox & radio buttons
+    ---------------------------------------*/
+    /* Global */
+    --toggles-size: 1.25rem;
+    --toggles-label-lineHeight: 1.25rem;
+    --toggles-label-fontSize: .875rem;
+    --toggles-label-marginLeft: .5rem;
+    --toggles-active: var(--color-brand);
+    --toggles-active-inner: var(--color-0);
+    --toggles-focus: 0 0 0 2px var(--color-0), 0 0 0 3px var(--color-brand);
+    --toggles-border: var(--color-1);
+    --toggles-border-hover: var(--color-brand);
+    --toggles-background: var(--color-0);
+    --toggles-disabled-background: var(--color-disabled-0);
+    --toggles-disabled-border: var(--color-disabled-1);
+    --toggles-disabled-checked-inner: var(--color-disabled-2);
+
+    /* default checkbox */
+    --toggles-checkbox-radius: .25rem;
+
+    /* radio buttons */
+    --toggles-radio-radius: 100%;
+    --toggles-radio-inner-size: .6rem;
+
+    /* switch checkbox */
+    --toggles-switch-width: 2.5rem;
+    --toggles-switch-radius: 1rem;
+    --toggles-switch-inner-size: .875rem;
+    --toggles-switch-inner-radius: 100%;
+
+    /* -------------------------------------
+        Range
+    ---------------------------------------*/
+    --range-track-height: .25ex;
+    --range-track-backgroundColor: var(--color-brand);
+
+    --range-thumb-size: 3ex;
+    --range-thumb-offset: -1.25ex;
+    --range-thumb-highlight-size: 2px;
+    --range-thumb-highlight-color: var(--color-brand);
+    --range-thumb-backgroundColor: var(--color-brand);
+    --range-thumb-borderColor: var(--color-0);
+
+    /* -------------------------------------
+        fields
+    ---------------------------------------*/
+    --fields-labelFontSize: .875rem;
+    --fields-labelMarginBottom: .5rem;
+
+    --fields-fontSize: 1rem;
+    --fields-height: 2.5rem;
+    --fields-lineHeight: 1.5;
+    --fields-placeholderColor: var(--color-1);
+    --fields-paddingX: .5rem;
+    --fields-paddingY: 0;
+    --fields-backgroundColor: var(--color-0);
+    --fields-color: var(--color-2);
+    --fields-boxShadow: none;
+    --fields-borderColor: var(--color-1);
+    --fields-borderRadius: .25rem;
+    --fields-border-hover: var(--color-brand);
+    --fields-focus: 0 0 0 2px var(--color-0), 0 0 0 3px var(--color-brand);
+
+    --fields-disabled-background: var(--color-disabled-0);
+    --fields-disabled-border: var(--color-disabled-1);
+    --fields-disabled-color: var(--color-disabled-2);
+
+    /* textarea */
+    --fields-textareaMinHeight: 5rem;
+    --fields-textareaPaddingY: var(--fields-paddingX);
+
+    /* 
+        select icon
+        change stroke color equals to hex equivalent of default color 
+        stroke='%23404040' or deafult disabled color stroke='%23d6d6d6'
+    */
+    --fields-selectIcon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath  stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+
+    --fields-disabled-selectIcon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath  stroke='%23d6d6d6' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+
+    --fields-select-backgroundSize: 1.5em 1.5em;
+
+    --fields-select-backgroundColor: var(--color-brand);
+    --fields-select-borderColor: var(--color-brand);
+    --fields-select-color: var(--color-0);
+
+    --fields-select-disabled-backgroundColor: var(--color-disabled-0);
+    --fields-select-disabled-borderColor: var(--color-disabled-1);
+    --fields-select-disabled-color: var(--color-disabled-2);
+
+}
+
+
+[data-theme="dark"] {
+    --color-0: hsl(0deg 0% 10%);
+    --color-1: hsl(0deg 0% 25%);
+    --color-2: hsl(0deg 0% 65%);
+
+    --color-disabled-0: hsl(0deg 0% 18%);
+    --color-disabled-1: hsl(0deg 0% 25%);
+    --color-disabled-2: hsl(0deg 0% 30%);
+
+    --toggles-active-inner: hsl(0deg 0% 80%);
+
+    --fields-select-color: hsl(0deg 0% 80%);
+
+    --fields-selectIcon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath  stroke='%23cccccc' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+
+    --fields-disabled-selectIcon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath  stroke='%234d4d4d' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+}
+

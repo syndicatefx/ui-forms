@@ -1,0 +1,73 @@
+@custom-selector :--fields input:not([type=checkbox],[type=radio],[type="range"],[type="submit"],[type="reset"]), textarea, select;
+
+label {
+    display: block;
+    font-size: var(--fields-labelFontSize);
+    margin-bottom: var(--fields-labelMarginBottom);
+}
+:--fields {
+    appearance: none;
+    font-family: inherit;
+    font-size: var(--fields-fontSize);
+    width: 100%;
+    height: var(--fields-height);
+    line-height: var(--fields-lineHeight);
+    outline: none;
+    padding-inline: var(--fields-paddingX);
+    padding-block: var(--fields-paddingY);
+    background-color: var(--bg, var(--fields-backgroundColor));
+    color: var(--c, var(--fields-color));
+    box-shadow: var(--fields-boxShadow);
+    border: 1px solid var(--bc, var(--fields-borderColor));
+    border-radius: var(--fields-borderRadius);
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.2s;
+
+    &::placeholder {
+        color: var(--fields-placeholderColor);
+    }
+
+    &:hover:not(:disabled) {
+        --bc: var(--fields-border-hover);
+    }
+
+    &:focus {
+        box-shadow: var(--fields-focus);
+    }
+
+    &:disabled {
+        --bc: var(--fields-disabled-border);
+        --bg: var(--fields-disabled-background);
+        --c: var(--fields-disabled-color);
+    
+        &::placeholder {
+          color: var(--c);
+        }
+    }
+}
+
+textarea {
+    min-height: var(--fields-textareaMinHeight);
+    padding-block: var(--fields-textareaPaddingY);
+    resize: vertical;
+}
+
+select {
+    background-color: var(--fields-select-backgroundColor);
+    border-color: var(--fields-select-borderColor);
+    color: var(--fields-select-color);
+    background-image: var(--fields-selectIcon);
+    background-position: right var(--fields-paddingX) center;
+    background-repeat: no-repeat;
+    background-size: var(--fields-select-backgroundSize);
+
+    &::-ms-expand {
+        display: none
+    }
+
+    &:disabled {
+        background-color: var(--fields-select-disabled-backgroundColor);
+        border-color: var(--fields-select-disabled-borderColor);
+        color: var(--fields-select-disabled-color);
+        background-image: var(--fields-disabled-selectIcon);
+    }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "ui-forms",
+  "version": "1.0.0",
+  "description": "HTML form elements styles",
+  "author": "Paulo Nunes <syndicatefx@gmail.com>",
+  "license": "MIT",
+  "postcss": {
+    "plugins": {
+      "postcss-easy-import": {},
+      "postcss-preset-env": {
+        "stage": "0",
+        "browsers": "defaults",
+        "features": {
+          "custom-properties": false,
+          "prefers-color-scheme-query": false
+        },
+        "preserve": false
+      },
+      "postcss-clean": {
+        "keepSpecialComments": "1"
+      }
+    }
+  },
+  "scripts": {
+    "css": "postcss src/ui-forms.css -o css/ui-forms.min.css",
+    "watch": "onchange 'src/**/*.css' -- npm-run-all css",
+    "build": "npm-run-all css",
+    "browsersync": "browser-sync start --server --files 'css/ui-forms.min.css' 'index.html'",
+    "prestart": "npm-run-all css",
+    "start": "npm-run-all --parallel watch browsersync css"
+  },
+  "devDependencies": {
+    "browser-sync": "latest",
+    "npm-run-all": "latest",
+    "onchange": "latest",
+    "postcss": "latest",
+    "postcss-clean": "latest",
+    "postcss-cli": "latest",
+    "postcss-easy-import": "latest",
+    "postcss-preset-env": "latest"
+  }
+}
