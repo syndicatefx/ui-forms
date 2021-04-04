@@ -1,5 +1,5 @@
 html {
-    font-family: -system-ui;
+    font-family: system-ui;
     font-size: 100%;
     block-size: 100%;
     overflow-y: auto;
@@ -12,18 +12,6 @@ html {
     box-sizing: border-box;
     scrollbar-width: auto;
     scrollbar-color: var(--color-brand) transparent;
-}
-@supports (font-variation-settings: normal) {
-    html {
-        font-family: 'Inter', system-ui;
-    } 
-    @font-face {
-        font-family: 'Inter';
-        font-weight: 100 900;
-        font-style: normal;
-        src: url("Inter-roman.latin.var.woff2") format("woff2");
-        font-display: swap;
-    }
 }
 
 * {
@@ -65,8 +53,7 @@ svg {
 
 body {
     font-size: 1rem;
-    block-size: 100%;
-    font-feature-settings: "ss01";
+    min-block-size: 100%;
     background: var(--color-0);
     color: var(--color-2);
 }

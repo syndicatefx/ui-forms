@@ -52,9 +52,11 @@ textarea {
 }
 
 select {
+    position: relative;
     background-color: var(--fields-select-backgroundColor);
     border-color: var(--fields-select-borderColor);
     color: var(--fields-select-color);
+
     background-image: var(--fields-selectIcon);
     background-position: right var(--fields-paddingX) center;
     background-repeat: no-repeat;

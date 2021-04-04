@@ -13,8 +13,7 @@
         "features": {
           "custom-properties": false,
           "prefers-color-scheme-query": false
-        },
-        "preserve": false
+        }
       },
       "postcss-clean": {
         "keepSpecialComments": "1"

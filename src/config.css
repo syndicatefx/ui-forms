@@ -1,15 +1,16 @@
 :root {
 
     /* Colors */
-    --color-brand: hsl(260deg 80% 50%);
+    --brand-hue: 260;
+    --color-brand: hsl(var(--brand-hue) 80% 50%);
 
-    --color-0: hsl(0deg 0% 100%);
-    --color-1: hsl(0deg 0% 75%);
-    --color-2: hsl(0deg 0% 25%);
+    --color-0: hsl(var(--brand-hue) 10% 98%);
+    --color-1: hsl(var(--brand-hue) 10% 75%);
+    --color-2: hsl(var(--brand-hue) 10% 25%);
 
-    --color-disabled-0: hsl(0deg 0% 94%);
-    --color-disabled-1: hsl(0deg 0% 88%);
-    --color-disabled-2: hsl(0deg 0% 84%);
+    --color-disabled-0: hsl(var(--brand-hue) 10% 92%);
+    --color-disabled-1: hsl(var(--brand-hue) 10% 86%);
+    --color-disabled-2: hsl(var(--brand-hue) 10% 82%);
 
     /* -------------------------------------
         Toggles -- checkbox & radio buttons
@@ -86,13 +87,13 @@
     /* 
         select icon
         change stroke color equals to hex equivalent of default color 
-        stroke='%23404040' or deafult disabled color stroke='%23d6d6d6'
+        stroke='%23faf9fa' or deafult disabled color stroke='%23d0cdd6'
     */
-    --fields-selectIcon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath  stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    --fields-selectIcon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath  stroke='%23faf9fa' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
 
-    --fields-disabled-selectIcon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath  stroke='%23d6d6d6' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    --fields-disabled-selectIcon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath  stroke='%23d0cdd6' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
 
-    --fields-select-backgroundSize: 1.5em 1.5em;
+    --fields-select-backgroundSize: 1.5rem 1.5rem;
 
     --fields-select-backgroundColor: var(--color-brand);
     --fields-select-borderColor: var(--color-brand);
@@ -106,20 +107,20 @@
 
 
 [data-theme="dark"] {
-    --color-0: hsl(0deg 0% 10%);
-    --color-1: hsl(0deg 0% 25%);
-    --color-2: hsl(0deg 0% 65%);
+    --color-0: hsl(var(--brand-hue) 10% 10%);
+    --color-1: hsl(var(--brand-hue) 10% 25%);
+    --color-2: hsl(var(--brand-hue) 10% 65%);
 
-    --color-disabled-0: hsl(0deg 0% 18%);
-    --color-disabled-1: hsl(0deg 0% 25%);
-    --color-disabled-2: hsl(0deg 0% 30%);
+    --color-disabled-0: hsl(var(--brand-hue) 10% 18%);
+    --color-disabled-1: hsl(var(--brand-hue) 10% 25%);
+    --color-disabled-2: hsl(var(--brand-hue) 10% 30%);
 
-    --toggles-active-inner: hsl(0deg 0% 80%);
+    --toggles-active-inner: hsl(var(--brand-hue) 10% 80%);
 
-    --fields-select-color: hsl(0deg 0% 80%);
+    --fields-select-color: hsl(var(--brand-hue) 10% 80%);
 
-    --fields-selectIcon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath  stroke='%23cccccc' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    --fields-selectIcon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath  stroke='%23cac7d1' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
 
-    --fields-disabled-selectIcon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath  stroke='%234d4d4d' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    --fields-disabled-selectIcon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath  stroke='%23474251' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
 }
 
