@@ -20,7 +20,7 @@ label {
     box-shadow: var(--fields-boxShadow);
     border: 1px solid var(--bc, var(--fields-borderColor));
     border-radius: var(--fields-borderRadius);
-    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.2s;
+    transition: background-color 0.3s, border-color 0.3s;
 
     &::placeholder {
         color: var(--fields-placeholderColor);
@@ -53,14 +53,16 @@ textarea {
 
 select {
     position: relative;
-    background-color: var(--fields-select-backgroundColor);
     border-color: var(--fields-select-borderColor);
+    background-color: var(--fields-select-backgroundColor);
     color: var(--fields-select-color);
-
-    background-image: var(--fields-selectIcon);
+    background-image: 
+        linear-gradient(-45deg,var(--fields-select-backgroundColor) 40%, transparent 40%),
+        linear-gradient(45deg,var(--fields-select-backgroundColor) 40%, var(--fields-select-color) 40% 50%, transparent 50%),
+        linear-gradient(-45deg,transparent 40%, var(--fields-select-color) 40% 50%, transparent 50%);
     background-position: right var(--fields-paddingX) center;
     background-repeat: no-repeat;
-    background-size: var(--fields-select-backgroundSize);
+    background-size: var(--fields-select-iconBackgroundSize);
 
     &::-ms-expand {
         display: none
@@ -70,6 +72,9 @@ select {
         background-color: var(--fields-select-disabled-backgroundColor);
         border-color: var(--fields-select-disabled-borderColor);
         color: var(--fields-select-disabled-color);
-        background-image: var(--fields-disabled-selectIcon);
+        background-image: 
+            linear-gradient(-45deg,var(--fields-select-disabled-backgroundColor) 40%, transparent 40%),
+            linear-gradient(45deg,var(--fields-select-disabled-backgroundColor) 40%, var(--fields-select-disabled-color) 40% 50%, transparent 50%),
+            linear-gradient(-45deg,transparent 40%, var(--fields-select-disabled-color) 40% 50%, transparent 50%);
     }
 }
