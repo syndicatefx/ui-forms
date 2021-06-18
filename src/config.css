@@ -1,7 +1,7 @@
 :root {
 
     /* Colors */
-    --brand-hue: 260;
+    --brand-hue: 240;
     --color-brand: hsl(var(--brand-hue) 80% 50%);
 
     --color-0: hsl(var(--brand-hue) 10% 98%);
@@ -16,8 +16,8 @@
         Toggles -- checkbox & radio buttons
     ---------------------------------------*/
     /* Global */
-    --toggles-size: 1.25rem;
-    --toggles-label-lineHeight: 1.25rem;
+    --toggles-size: 1.5rem;
+    --toggles-label-lineHeight: 1.5rem;
     --toggles-label-fontSize: .875rem;
     --toggles-label-marginLeft: .5rem;
     --toggles-active: var(--color-brand);
@@ -38,7 +38,7 @@
     --toggles-radio-inner-size: .6rem;
 
     /* switch checkbox */
-    --toggles-switch-width: 2.5rem;
+    --toggles-switch-width: 3rem;
     --toggles-switch-radius: 1rem;
     --toggles-switch-inner-size: .875rem;
     --toggles-switch-inner-radius: 100%;
@@ -63,7 +63,7 @@
     --fields-labelMarginBottom: .5rem;
 
     --fields-fontSize: 1rem;
-    --fields-height: 2.5rem;
+    --fields-height: 3rem;
     --fields-lineHeight: 1.5;
     --fields-placeholderColor: var(--color-1);
     --fields-paddingX: .5rem;
@@ -99,6 +99,8 @@
 
 
 [data-theme="dark"] {
+    --color-brand: hsl(var(--brand-hue) 60% 50%);
+
     --color-0: hsl(var(--brand-hue) 10% 10%);
     --color-1: hsl(var(--brand-hue) 10% 25%);
     --color-2: hsl(var(--brand-hue) 10% 65%);
